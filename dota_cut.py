@@ -10,8 +10,15 @@ def click(x,y):
     
 #dimensions: width: 270-1270, height: 205-830
 def cut_dem_trees():
-    w = range(270, 1270)
-    h = range(205, 830)
+    width = win32api.GetSystemMetrics(0) 
+    height = win32api.GetSystemMetrics(1) 
+    w1 = int(width * float(270.0/1920.0) )
+    w2 = int(width * float(1270.0/1920.0) ) 
+    h1 = int(height * float(205.0/1080.0) )
+    h2 = int(height * float(830.0/1080.0) ) 
+    print w1, w2, h1, h2
+    w = range(w1, w2)
+    h = range(h1, h2)
     while(True):
         click(random.choice(w), random.choice(h))
         time.sleep(0.1)
