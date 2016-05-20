@@ -16,7 +16,6 @@ def cut_dem_trees():
     w2 = int(width * float(1270.0/1920.0) ) 
     h1 = int(height * float(205.0/1080.0) )
     h2 = int(height * float(830.0/1080.0) ) 
-    print w1, w2, h1, h2
     w = range(w1, w2)
     h = range(h1, h2)
     while(True):
